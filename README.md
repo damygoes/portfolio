@@ -7,51 +7,53 @@ It highlights personal projects, work experience, skills, and contact informatio
 ---
 
 ## 📁 Folder Structure
-.
-├── README.md
-├── app
-│   ├── favicon.ico
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components
-│   ├── layout
-│   │   ├── Footer.tsx
-│   │   ├── Navbar.tsx
-│   │   └── SectionHeading.tsx
-│   ├── providers
-│   │   └── theme-provider.tsx
-│   ├── sections
-│   │   ├── AboutSection.tsx
-│   │   ├── ContactSection.tsx
-│   │   ├── ExperienceSection.tsx
-│   │   ├── HeroSection.tsx
-│   │   ├── ProjectsSection.tsx
-│   │   └── SkillSection.tsx
-│   ├── shared
-│   │   └── ModeToggle.tsx
-│   └── ui
-│       ├── badge.tsx
-│       ├── button.tsx
-│       ├── card.tsx
-│       └── dropdown-menu.tsx
-├── components.json
-├── eslint.config.mjs
-├── hooks
-│   └── useScrollSection.ts
-├── lib
-│   ├── constants.tsx
-│   └── utils.ts
-├── next-env.d.ts
-├── next.config.ts
-├── package.json
-├── pnpm-lock.yaml
-├── postcss.config.mjs
-├── public
-│   ├── avatar.jpg
-│   ├── cv.pdf
-│   └── placeholder.jpg
-└── tsconfig.json
+```bash
+    .
+    ├── README.md
+    ├── app
+    │   ├── favicon.ico
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    ├── components
+    │   ├── layout
+    │   │   ├── Footer.tsx
+    │   │   ├── Navbar.tsx
+    │   │   └── SectionHeading.tsx
+    │   ├── providers
+    │   │   └── theme-provider.tsx
+    │   ├── sections
+    │   │   ├── AboutSection.tsx
+    │   │   ├── ContactSection.tsx
+    │   │   ├── ExperienceSection.tsx
+    │   │   ├── HeroSection.tsx
+    │   │   ├── ProjectsSection.tsx
+    │   │   └── SkillSection.tsx
+    │   ├── shared
+    │   │   └── ModeToggle.tsx
+    │   └── ui
+    │       ├── badge.tsx
+    │       ├── button.tsx
+    │       ├── card.tsx
+    │       └── dropdown-menu.tsx
+    ├── components.json
+    ├── eslint.config.mjs
+    ├── hooks
+    │   └── useScrollSection.ts
+    ├── lib
+    │   ├── constants.tsx
+    │   └── utils.ts
+    ├── next-env.d.ts
+    ├── next.config.ts
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── postcss.config.mjs
+    ├── public
+    │   ├── avatar.jpg
+    │   ├── cv.pdf
+    │   └── placeholder.jpg
+    └── tsconfig.json
+```
 ---
 
 ## 📄 License
