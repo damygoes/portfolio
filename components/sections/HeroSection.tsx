@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronDown, Download } from "lucide-react"
 import Link from 'next/link'
+import { Section } from '../layout/Section'
 
 type Props = {
   scrollToSection: (id: string) => void
@@ -11,7 +12,7 @@ type Props = {
 
 const HeroSection = ({ scrollToSection }: Props) => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative">
+    <Section id="hero" className="flex items-center justify-center relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <h1 className="text-5xl md:text-6xl mb-6">
@@ -43,11 +44,11 @@ const HeroSection = ({ scrollToSection }: Props) => {
       <motion.div
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-20 left-1/2 transform -translate-x-1/2"
       >
         <ChevronDown className="h-6 w-6 text-gray-400" />
       </motion.div>
-    </section>
+    </Section>
   )
 }
 

@@ -2,9 +2,10 @@ import { SectionHeading } from "@/components/layout/SectionHeading"
 import { motion } from "framer-motion"
 import { Calendar, MapPin } from "lucide-react"
 import Image from 'next/image'
+import { Section } from '../layout/Section'
 
 const AboutSection = () => (
-  <section id="about" className="py-20">
+  <Section id="about">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading title="About Me" />
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -58,7 +59,7 @@ const AboutSection = () => (
         </motion.div>
       </div>
     </div>
-  </section>
+  </Section>
 )
 
 export default AboutSection

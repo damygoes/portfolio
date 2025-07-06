@@ -9,9 +9,10 @@ import { motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from 'next/link'
+import { Section } from '../layout/Section'
 
 const ProjectsSection = () => (
-  <section id="projects" className="py-20">
+  <Section id="projects">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading title="Featured Projects" />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -74,7 +75,7 @@ const ProjectsSection = () => (
         ))}
       </div>
     </div>
-  </section>
+  </Section>
 )
 
 export default ProjectsSection

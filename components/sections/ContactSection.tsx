@@ -4,6 +4,8 @@ import { SectionHeading } from "@/components/layout/SectionHeading"
 import { contacts } from '@/lib/constants'
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import Footer from '../layout/Footer'
+import { Section } from '../layout/Section'
 
 const ContactLink = ({ icon, title, link }: typeof contacts[0]) => (
   <Link
@@ -18,7 +20,7 @@ const ContactLink = ({ icon, title, link }: typeof contacts[0]) => (
 )
 
 const ContactSection = () => (
-  <section id="contact" className="py-20">
+  <Section id="contact" className="flex flex-col items-center justify-between">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading
         title="Let's Work Together"
@@ -37,7 +39,8 @@ const ContactSection = () => (
         ))}
       </motion.div>
     </div>
-  </section>
+    <Footer />
+  </Section>
 )
 
 export default ContactSection

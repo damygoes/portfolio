@@ -1,12 +1,15 @@
-import { SectionHeading } from "@/components/layout/SectionHeading"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { skills } from '@/lib/constants'
-import { motion } from "framer-motion"
-import { Button } from '../ui/button'
+"use client";
+
+import { SectionHeading } from "@/components/layout/SectionHeading";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { skills } from '@/lib/constants';
+import { motion } from "framer-motion";
+import { Section } from '../layout/Section';
+import { Button } from '../ui/button';
 
 const SkillsSection = () => (
-  <section id="skills" className="py-20">
+  <Section id="skills">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading title="Technical Skills" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -42,7 +45,7 @@ const SkillsSection = () => (
         ))}
       </div>
     </div>
-  </section>
+  </Section>
 )
 
 export default SkillsSection

@@ -7,37 +7,43 @@ export function useScrollSection() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-
     const options = {
-      root: null, // viewport
-      rootMargin: "0px",
-      threshold: 0.5, // 50% of section visible triggers intersection
+      root: null,
+      threshold: 0.2, // good balance: 20% of section visible triggers it
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
+      const visibleSections = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visibleSections.length > 0) {
+        setActiveSection(visibleSections[0].target.id);
+      }
     }, options);
+
+    const elements: HTMLElement[] = [];
 
     sections.forEach((id) => {
       const element = document.getElementById(id);
-      if (element) observer.observe(element);
+      if (element) {
+        observer.observe(element);
+        elements.push(element);
+      }
     });
 
     return () => {
-      sections.forEach((id) => {
-        const element = document.getElementById(id);
-        if (element) observer.unobserve(element);
-      });
+      elements.forEach(el => observer.unobserve(el));
     };
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      const yOffset = -80; // adjust if you have a sticky navbar
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return { activeSection, scrollToSection };

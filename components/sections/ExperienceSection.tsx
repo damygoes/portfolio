@@ -3,9 +3,10 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { experiences } from '@/lib/constants'
 import { motion } from "framer-motion"
+import { Section } from '../layout/Section'
 
 const ExperienceSection = () => (
-  <section id="experience" className="py-20">
+  <Section id="experience">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading title="Experience" />
       <div className="max-w-4xl mx-auto space-y-8">
@@ -45,7 +46,7 @@ const ExperienceSection = () => (
 
       </div>
     </div>
-  </section>
+  </Section>
 )
 
 export default ExperienceSection
