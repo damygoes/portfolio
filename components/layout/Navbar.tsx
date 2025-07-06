@@ -14,7 +14,7 @@ type NavbarProps = {
 const Navbar: FC<NavbarProps> = ({ activeSection, scrollToSection }) => {
 
   return (
-    <nav className="sticky top-4 z-50 backdrop-blur-sm w-fit mx-auto rounded-full px-8 py-2 bg-card shadow-md">
+    <nav className="sticky top-4 z-50 backdrop-blur-sm w-fit mx-auto rounded-full px-8 py-4 bg-card shadow-md">
         <div className="flex justify-between items-center gap-24">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
