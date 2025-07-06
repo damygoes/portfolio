@@ -14,13 +14,13 @@ const AboutSection = () => (
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="w-80 h-80 mx-auto bg-background rounded-lg flex items-center justify-center">
+          <div className="w-80 h-80 mx-auto bg-background rounded-xl flex items-center justify-center border" >
             <Image
               src='/avatar.jpg'
               alt="Profile Picture"
               width={400}
               height={400}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover rounded-xl"
             />
           </div>
         </motion.div>

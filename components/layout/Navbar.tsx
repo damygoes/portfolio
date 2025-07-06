@@ -21,7 +21,7 @@ const Navbar: FC<NavbarProps> = ({ activeSection, scrollToSection }) => {
             animate={{ opacity: 1, x: 0 }}
             onClick={() => scrollToSection("hero")}
           >
-            <Button size='icon' variant="ghost" className='text-xl font-semibold transition-colors text-primary hover:bg-transparent hover:text-primary/70'>
+            <Button size='icon' variant="ghost" className='text-xl font-semibold transition-colors text-primary hover:text-foreground'>
               DB
             </Button>
           </motion.div>
