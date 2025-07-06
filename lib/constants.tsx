@@ -60,30 +60,25 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    image: "/placeholder.jpg",
-    github: "https://github.com/yourusername/ecommerce-platform",
-    demo: "https://ecommerce.example.com",
+    title: "Reflect – Wellness & Journaling App",
+    description:
+      "A beautifully glassy React Native app for mood tracking, journaling, and mindfulness. Powered by Expo and Supabase.",
+    tech: ["React Native", "Expo", "Supabase", "TypeScript"],
+    image: "/reflect-app.jpg",
+    github: "https://github.com/damygoes/reflect",
+    // demo: "https://expo.dev/@yourusername/reflect-app",
   },
   {
-    title: "Task Management App",
-    description: "Real-time collaboration tool built with Next.js and GraphQL",
-    tech: ["Next.js", "GraphQL", "MongoDB", "Socket.io"],
+    title: "KPI Bot – Stripe Metrics Dashboard",
+    description:
+      "A SaaS dashboard that connects to Stripe accounts to visualize real-time subscription metrics like MRR, ARR, churn rate, and more.",
+    tech: ["Next.js", "TypeScript", "Stripe API", "Drizzle ORM", "PostgreSQL", "Recharts", "Shadcn UI"],
     image: "/placeholder.jpg",
-    github: "https://github.com/yourusername/task-app",
-    demo: "https://taskapp.example.com",
-  },
-  {
-    title: "Mobile Fitness Tracker",
-    description: "React Native app with health tracking and social features",
-    tech: ["React Native", "NestJS", "Redis", "AWS"],
-    image: "/placeholder.jpg",
-    github: "https://github.com/yourusername/fitness-tracker",
-    demo: "https://fitnessapp.example.com",
+    github: "https://github.com/damygoes/kpi-bot",
+    // demo: "https://kpi-bot.example.com",
   },
 ]
+
 
 export const skills = [
   {
