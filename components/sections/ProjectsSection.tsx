@@ -30,7 +30,7 @@ const ProjectsSection = () => (
                   alt={project.title}
                   width={400}
                   height={400}
-                  className="w-full h-56 object-cover"
+                  className="w-full h-72 object-cover rounded-t-xl"
                 />
               </div>
               <CardHeader>
@@ -60,7 +60,8 @@ const ProjectsSection = () => (
                   {project.demo && (
                     <Button
                       asChild
-                      size="sm"                    >
+                      size="sm"                    
+                    >
                       <Link href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-4 w-4" /> Demo
                       </Link>

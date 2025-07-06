@@ -1,11 +1,12 @@
 import { Code, Database, Github, Globe, Linkedin, Mail, Server } from 'lucide-react';
+import { Contacts, Experiences, Projects, Skills } from './types';
 
 
 export const sections = ["hero", "about", "experience", "projects", "skills", "contact"]
 
 export const navLinks = ["About", "Experience", "Projects", "Skills", "Contact"]
 
-export const experiences = [
+export const experiences: Experiences = [
   {
     title: "Team Lead",
     company: "apomap GmbH",
@@ -58,13 +59,13 @@ export const experiences = [
   },
 ]
 
-export const projects = [
+export const projects: Projects = [
   {
     title: "Reflect – Wellness & Journaling App",
     description:
       "A beautifully glassy React Native app for mood tracking, journaling, and mindfulness. Powered by Expo and Supabase.",
     tech: ["React Native", "Expo", "Supabase", "TypeScript"],
-    image: "/reflect-app.jpg",
+    image: "/reflect-app.png",
     github: "https://github.com/damygoes/reflect",
     // demo: "https://expo.dev/@yourusername/reflect-app",
   },
@@ -79,27 +80,30 @@ export const projects = [
   },
 ]
 
-
-export const skills = [
+export const skills: Skills = [
   {
-    icon: <Code className="h-6 w-6" />, title: "Frontend",
+    icon: <Code className="h-6 w-6" />, 
+    title: "Frontend",
     skills: ["React", "Next.js", "React Native", "TypeScript", "Tailwind CSS"]
   },
   {
-    icon: <Server className="h-6 w-6" />, title: "Backend",
+    icon: <Server className="h-6 w-6" />, 
+    title: "Backend",
     skills: ["Node.js", "NestJS", "Express", "REST API", "GraphQL"]
   },
   {
-    icon: <Database className="h-6 w-6" />, title: "Database",
+    icon: <Database className="h-6 w-6" />, 
+    title: "Database",
     skills: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "TypeORM", "Drizzle ORM"]
   },
   {
-    icon: <Globe className="h-6 w-6" />, title: "DevOps, Tools & Architecture",
+    icon: <Globe className="h-6 w-6" />, 
+    title: "DevOps, Tools & Architecture",
     skills: ["Docker", "AWS", "Git", "CI/CD", "Testing", "Monrepo", "Microservices", "Serverless"]
   }
 ]
 
-export const contacts = [
+export const contacts: Contacts = [
   {
     icon: <Mail className="h-6 w-6" />,
     title: "Email",
