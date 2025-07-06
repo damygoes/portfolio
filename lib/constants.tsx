@@ -78,6 +78,15 @@ export const projects: Projects = [
     github: "https://github.com/damygoes/kpi-bot",
     // demo: "https://kpi-bot.example.com",
   },
+  {
+    title: "Archetype – Microservices Architecture Case Study",
+    description:
+      "A scalable Node.js microservices architecture with shared TypeORM models, modular monorepo setup, and independent service deployment. Built with Docker, Express, and Lerna.",
+    tech: ["TypeScript", "Node.js", "Express", "TypeORM", "Lerna", "Docker", "MySQL"],
+    image: "/archetype-project.png",
+    github: "https://github.com/damygoes/archetype",
+  }
+
 ]
 
 export const skills: Skills = [

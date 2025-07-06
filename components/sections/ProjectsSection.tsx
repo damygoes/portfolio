@@ -25,13 +25,13 @@ const ProjectsSection = () => (
             viewport={{ once: true }}
           >
             <Card className="h-full pt-0 hover:shadow-lg transition-shadow">
-              <div className="relative overflow-hidden rounded-t-lg">
+              <div className="relative overflow-hidden rounded-t-lg p-4">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={400}
                   height={400}
-                  className="w-full h-72 object-cover rounded-t-xl"
+                  className="w-full h-72 object-cover rounded-xl"
                 />
               </div>
               <CardHeader>
