@@ -1,9 +1,15 @@
-import { SectionHeading } from "@/components/layout/SectionHeading"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { experiences } from '@/lib/constants'
-import { motion } from "framer-motion"
-import { Section } from '../layout/Section'
+import { SectionHeading } from '@/components/layout/SectionHeading';
+import { Badge } from '@/components/ui/badge';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { experiences } from '@/lib/constants';
+import { motion } from 'framer-motion';
+import { Section } from '../layout/Section';
 
 const ExperienceSection = () => (
   <Section id="experience">
@@ -27,9 +33,7 @@ const ExperienceSection = () => (
                       {exp.company} · <span>{exp.location}</span>
                     </CardDescription>
                   </div>
-                  <Badge variant="outline">
-                    {exp.period}
-                  </Badge>
+                  <Badge variant="outline">{exp.period}</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -43,10 +47,9 @@ const ExperienceSection = () => (
             </Card>
           </motion.div>
         ))}
-
       </div>
     </div>
   </Section>
-)
+);
 
-export default ExperienceSection
+export default ExperienceSection;

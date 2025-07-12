@@ -1,10 +1,10 @@
-"use client"
+'use client';
 
 import { sections } from '@/lib/constants';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export function useScrollSection() {
-  const [activeSection, setActiveSection] = useState("hero");
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const options = {
@@ -14,7 +14,7 @@ export function useScrollSection() {
 
     const observer = new IntersectionObserver((entries) => {
       const visibleSections = entries
-        .filter(entry => entry.isIntersecting)
+        .filter((entry) => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
       if (visibleSections.length > 0) {
@@ -33,7 +33,7 @@ export function useScrollSection() {
     });
 
     return () => {
-      elements.forEach(el => observer.unobserve(el));
+      elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
@@ -42,7 +42,7 @@ export function useScrollSection() {
     if (element) {
       const yOffset = -80; // adjust if you have a sticky navbar
       const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 

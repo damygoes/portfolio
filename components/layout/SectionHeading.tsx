@@ -1,10 +1,10 @@
-import { motion } from "framer-motion"
-import { FC } from "react"
+import { motion } from 'framer-motion';
+import { FC } from 'react';
 
 type Props = {
-  title: string
-  subtitle?: string
-}
+  title: string;
+  subtitle?: string;
+};
 
 export const SectionHeading: FC<Props> = ({ title, subtitle }) => (
   <motion.div
@@ -18,4 +18,4 @@ export const SectionHeading: FC<Props> = ({ title, subtitle }) => (
     <div className="w-16 h-0.5 bg-primary mx-auto mb-2" />
     {subtitle && <p className="text-lg max-w-2xl mx-auto">{subtitle}</p>}
   </motion.div>
-)
+);

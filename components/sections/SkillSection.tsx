@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { SectionHeading } from "@/components/layout/SectionHeading";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SectionHeading } from '@/components/layout/SectionHeading';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { skills } from '@/lib/constants';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import { Section } from '../layout/Section';
 import { Button } from '../ui/button';
 
@@ -23,7 +23,7 @@ const SkillsSection = () => (
           >
             <Card className="h-full hover:shadow-md transition-shadow">
               <CardHeader className="text-center pb-4">
-                <Button size='icon' className='mx-auto'>
+                <Button size="icon" className="mx-auto">
                   {category.icon}
                 </Button>
                 <CardTitle className="text-lg">{category.title}</CardTitle>
@@ -31,10 +31,7 @@ const SkillsSection = () => (
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <Badge
-                      key={skill}
-                      variant="secondary"
-                    >
+                    <Badge key={skill} variant="secondary">
                       {skill}
                     </Badge>
                   ))}
@@ -46,6 +43,6 @@ const SkillsSection = () => (
       </div>
     </div>
   </Section>
-)
+);
 
-export default SkillsSection
+export default SkillsSection;

@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import React from "react";
+import { cn } from '@/lib/utils';
+import React from 'react';
 
 interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   id: string;
@@ -7,11 +7,16 @@ interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export const Section = ({ id, className, children, ...props }: SectionProps) => {
+export const Section = ({
+  id,
+  className,
+  children,
+  ...props
+}: SectionProps) => {
   return (
     <section
       id={id}
-      className={cn("min-h-[100vh] scroll-mt-32 py-24", className)}
+      className={cn('min-h-[100vh] scroll-mt-32 py-24', className)}
       {...props}
     >
       {children}

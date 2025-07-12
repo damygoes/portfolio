@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Navbar from '@/components/layout/Navbar';
 import AboutSection from '@/components/sections/AboutSection';
@@ -9,19 +9,18 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillSection';
 import { useScrollSection } from '@/hooks/useScrollSection';
 
-
 export default function Portfolio() {
-  const { activeSection, scrollToSection } = useScrollSection()
+  const { activeSection, scrollToSection } = useScrollSection();
 
   return (
     <>
       <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
-      <HeroSection scrollToSection={scrollToSection}/>
+      <HeroSection scrollToSection={scrollToSection} />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
     </>
-  )
+  );
 }

@@ -1,13 +1,13 @@
-"use client"
+'use client';
 
-import { SectionHeading } from "@/components/layout/SectionHeading"
-import { contacts } from '@/lib/constants'
-import { motion } from "framer-motion"
-import Link from 'next/link'
-import Footer from '../layout/Footer'
-import { Section } from '../layout/Section'
+import { SectionHeading } from '@/components/layout/SectionHeading';
+import { contacts } from '@/lib/constants';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Footer from '../layout/Footer';
+import { Section } from '../layout/Section';
 
-const ContactLink = ({ icon, title, link }: typeof contacts[0]) => (
+const ContactLink = ({ icon, title, link }: (typeof contacts)[0]) => (
   <Link
     href={link}
     target="_blank"
@@ -17,7 +17,7 @@ const ContactLink = ({ icon, title, link }: typeof contacts[0]) => (
     <div className="text-primary group-hover:text-white">{icon}</div>
     <h3 className="font-semibold">{title}</h3>
   </Link>
-)
+);
 
 const ContactSection = () => (
   <Section id="contact" className="flex flex-col items-center justify-between">
@@ -41,6 +41,6 @@ const ContactSection = () => (
     </div>
     <Footer />
   </Section>
-)
+);
 
-export default ContactSection
+export default ContactSection;

@@ -6,5 +6,5 @@ export default function Footer() {
         <p>Built with ❤️ from Germany</p>
       </div>
     </footer>
-  )
+  );
 }

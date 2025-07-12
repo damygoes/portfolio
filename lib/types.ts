@@ -22,7 +22,7 @@ export type Contact = {
 };
 
 export type Experience = {
-  title:  string;
+  title: string;
   company: string;
   location: string;
   period: string;

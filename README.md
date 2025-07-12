@@ -7,6 +7,7 @@ It highlights personal projects, work experience, skills, and contact informatio
 ---
 
 ## 📁 Folder Structure
+
 ```bash
     .
     ├── README.md
@@ -54,6 +55,7 @@ It highlights personal projects, work experience, skills, and contact informatio
     │   └── placeholder.jpg
     └── tsconfig.json
 ```
+
 ---
 
 ## 📄 License
