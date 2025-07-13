@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, Download } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedBackground } from '../layout/AnimatedBackground';
@@ -28,6 +29,11 @@ const fadeUpVariants = {
 };
 
 const HeroSection = ({ scrollToSection }: Props) => {
+  const t = useTranslations('Hero');
+  const locale = useLocale();
+
+  console.log('Current locale:', locale); // For debugging or logic
+
   return (
     <Section
       id="hero"
@@ -61,7 +67,7 @@ const HeroSection = ({ scrollToSection }: Props) => {
           className="text-sm text-muted-foreground uppercase tracking-wide mb-3"
           variants={fadeUpVariants}
         >
-          Fullstack Developer · React · TypeScript · Node.js
+          {t('tagline')}
         </motion.p>
 
         {/* Heading */}
@@ -69,8 +75,8 @@ const HeroSection = ({ scrollToSection }: Props) => {
           className="text-5xl md:text-6xl font-bold leading-tight mb-6"
           variants={fadeUpVariants}
         >
-          Hi, I’m{' '}
-          <span className="text-primary font-extrabold">Damilola Bada</span>
+          {t('greeting')}{' '}
+          <span className="text-primary font-extrabold"> {t('name')} </span>
         </motion.h1>
 
         {/* Subheading */}
@@ -78,11 +84,9 @@ const HeroSection = ({ scrollToSection }: Props) => {
           className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
           variants={fadeUpVariants}
         >
-          I build web and mobile apps that just work — clean, fast, and easy to
-          use. With over{' '}
-          <span className="text-primary font-semibold">3 years</span> of
-          experience, I love turning ideas into reality and solving real
-          problems for real people.
+          {t('description_1')}{' '}
+          <span className="text-primary font-semibold"> {t('years')} </span>{' '}
+          {t('description_2')}
         </motion.p>
 
         {/* CTAs */}
@@ -91,11 +95,11 @@ const HeroSection = ({ scrollToSection }: Props) => {
           variants={fadeUpVariants}
         >
           <Button size="lg" onClick={() => scrollToSection('projects')}>
-            Check Out My Work <ArrowRight className="ml-2 h-4 w-4" />
+            {t('cta')} <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-              <Download className="mr-2 h-4 w-4" /> Download CV
+            <Link href={locale === 'de' ? '/lebenslauf.pdf' : '/resume.pdf'} target="_blank" rel="noopener noreferrer">
+              <Download className="mr-2 h-4 w-4" /> {t('download_cv')}
             </Link>
           </Button>
         </motion.div>

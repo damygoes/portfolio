@@ -19,12 +19,14 @@ export const sections = [
 ];
 
 export const navLinks = [
-  'About',
-  'Experience',
-  'Projects',
-  'Skills',
-  'Contact',
+  'about',
+  'experience',
+  'projects',
+  'skills',
+  'contact',
 ];
+
+export const aboutMeTexts = ['one', 'two', 'three', 'four'];
 
 export const experiences: Experiences = [
   {
@@ -176,17 +178,17 @@ export const projects: Projects = [
 export const skills: Skills = [
   {
     icon: <Code className="h-6 w-6" />,
-    title: 'Frontend',
+    title: 'frontend',
     skills: ['React', 'Next.js', 'React Native', 'TypeScript', 'Tailwind CSS'],
   },
   {
     icon: <Server className="h-6 w-6" />,
-    title: 'Backend',
+    title: 'backend',
     skills: ['Node.js', 'NestJS', 'Express', 'REST API', 'GraphQL', 'Golang'],
   },
   {
     icon: <Database className="h-6 w-6" />,
-    title: 'Database',
+    title: 'database',
     skills: [
       'PostgreSQL',
       'MongoDB',
@@ -198,7 +200,7 @@ export const skills: Skills = [
   },
   {
     icon: <Globe className="h-6 w-6" />,
-    title: 'DevOps, Tools & Architecture',
+    title: 'devops_tools_architecture',
     skills: [
       'Docker',
       'AWS',

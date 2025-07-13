@@ -1,0 +1,184 @@
+{
+  "Navigation": {
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "projects": "Projekte",
+    "skills": "Fähigkeiten",
+    "contact": "Kontakt"
+  },
+  "Hero": {
+    "tagline": "Fullstack-Entwickler · React · TypeScript · Node.js",
+    "greeting": "Hi, ich bin",
+    "name": "Damilola Bada",
+    "description_1": "ich entwickle Web- und Mobile-Apps, die einfach funktionieren – sauber, schnell und benutzerfreundlich. Mit über",
+    "years": "3 Jahren",
+    "description_2": "Erfahrung liebe ich es, Ideen in die Realität umzusetzen und echte Probleme für Menschen zu lösen.",
+    "cta": "Sieh dir meine Arbeit an",
+    "download_cv": "Lebenslauf herunterladen"
+  },
+  "About": {
+    "title": "Über mich",
+    "paragraphs": {
+      "one": "ich habe mit Fullstack-Entwicklung begonnen, weil ich Lösungen finden wollte, die den Menschen bei realen Problemen helfen. Was als Neugier begann, wurde schnell zu einer Leidenschaft, Web- und Mobile-Apps zu entwickeln, die einfach funktionieren – ohne unnötige Komplikationen.",
+      "two": "Auf dem Weg habe ich mir React und Next.js im Frontend sowie Node.js und NestJS im Backend selbst beigebracht. Für mich ist es wichtig, klaren und leicht wartbaren Code zu schreiben – das bedeutet weniger Kopfschmerzen für alle, besonders für die Menschen, mit denen ich zusammenarbeite.",
+      "three": "Ich glaube daran, dass Technologie echte Probleme einfach und zuverlässig lösen sollte – das motiviert mich jeden Tag. Deshalb arbeite ich gerne mit Menschen zusammen, die daran interessiert sind, die richtigen Dinge für diejenigen zu bauen, die sie tatsächlich nutzen.",
+      "four": "Jedes Projekt ist eine neue Chance zu lernen und etwas zu bewirken. Ich freue mich darauf, weiter zu wachsen – sowohl als Entwickler als auch als Teil der Teams, mit denen ich zusammenarbeite."
+    },
+    "cta": "Wenn du neugierig bist und mehr erfahren möchtest oder über ein sinnvolles Projekt sprechen willst, zögere nicht,",
+    "link": "Kontakt aufzunehmen"
+  },
+  "Experience": {
+    "title": "Erfahrung",
+    "experiences": [
+      {
+        "title": "Teamleiter",
+        "company": "apomap GmbH",
+        "location": "Winterberg, Deutschland (Hybrid)",
+        "period": "Jan. 2025 - Heute",
+        "description": "Leitung der Entwicklung und Teammanagement für eine SaaS-Logistikplattform.",
+        "responsibilities": [
+          "Mentoring und Code-Reviews für ein Team von 3 Entwicklern",
+          "Verwaltung von Projektzeitplänen und Sicherstellung qualitativ hochwertiger Ergebnisse",
+          "Implementierung und Wartung von CI/CD-Pipelines zur Optimierung der Bereitstellung",
+          "Durchführung von Interviews und Onboarding neuer Entwickler",
+          "Zusammenarbeit mit Produktmanagern zur Definition von Projektanforderungen"
+        ]
+      },
+      {
+        "title": "Fullstack-Entwickler",
+        "company": "apomap GmbH",
+        "location": "Winterberg, Deutschland (Hybrid)",
+        "period": "Nov. 2022 - Dez. 2024",
+        "description": "Entwicklung und Wartung skalierbarer Frontend- und Backend-Funktionen für die Logistik-SaaS-Plattform.",
+        "responsibilities": [
+          "Entwurf von GraphQL-APIs für effiziente Datenabfragen",
+          "Entwicklung responsiver Benutzeroberflächen mit React und Tailwind CSS",
+          "Performance-Optimierung für eine React-basierte Webanwendung",
+          "Integration von Drittanbieter-Logistik- und POS-APIs zur Verbesserung der Apothekenabläufe"
+        ]
+      },
+      {
+        "title": "Frontend-Entwickler",
+        "company": "MyCodeCareer",
+        "location": "Boston (MA), USA (Remote)",
+        "period": "Sep. 2022 - Nov. 2022",
+        "description": "Fokus auf den Wiederaufbau und die Verbesserung von Webanwendungsoberflächen.",
+        "responsibilities": [
+          "Zusammenarbeit mit UX-Designern zur Verbesserung der UI-Workflows",
+          "Neugestaltung der Firmenwebsite unter Verwendung moderner React Best Practices"
+        ]
+      },
+      {
+        "title": "Frontend-Entwickler (Praktikant)",
+        "company": "Brainnest GmbH",
+        "location": "Bremen, Deutschland (Remote)",
+        "period": "Jun. 2022 - Jul. 2022",
+        "description": "Sammelte praktische Erfahrungen bei der Entwicklung responsiver Webanwendungen.",
+        "responsibilities": [
+          "Arbeit mit Teammitgliedern zum Aufbau von UI-Komponenten",
+          "Code-Reviews und Feedback zur Frontend-Implementierung",
+          "Anwendung von Best Practices im Webentwicklung"
+        ]
+      },
+      {
+        "title": "Autodidaktischer Fullstack-Entwickler",
+        "company": "Freiberufliche und persönliche Projekte",
+        "location": "Deutschland",
+        "period": "Jun. 2020 - Mai 2022",
+        "description": "Entwicklung persönlicher und freiberuflicher Websites und autodidaktisches Lernen im Fullstack-Bereich.",
+        "responsibilities": [
+          "Erstellung und Verwaltung von Websites mit WordPress, Elementor, React und Node.js",
+          "Zusammenarbeit mit kleinen Unternehmen zur Verbesserung ihrer Online-Präsenz",
+          "Praxis im Fullstack-Bereich, einschließlich Authentifizierung, APIs und Deployment"
+        ]
+      },
+      {
+        "title": "Karrierewechsel",
+        "company": "Privat",
+        "location": "Deutschland",
+        "period": "Jan. 2020 - Mai 2020",
+        "description": "Kurze berufliche Auszeit während des COVID-19-Lockdowns zur Reflexion und Planung eines Wechsels in die Tech-Branche.",
+        "responsibilities": [
+          "Recherche zur Tech-Industrie und Selbstlern-Möglichkeiten",
+          "Erarbeitung eines langfristigen Ziels zum Übergang in die Softwareentwicklung"
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "title": "Projekte",
+    "projects": [
+      {
+        "title": "URL Analyzer – URL Metadaten-Scraper",
+        "description": "Eine Web-App, die Metadaten von jeder URL abruft und anzeigt, einschließlich Titel, Überschriften, defekte Links und mehr. Gebaut mit React und Go.",
+        "tech": [
+          "Golang",
+          "Gin (Go Framework)",
+          "React",
+          "Typescript",
+          "Vite",
+          "Tailwind CSS",
+          "Tanstack Query",
+          "Zustand",
+          "Docker"
+        ],
+        "image": "/url-analyzer.png",
+        "github": "https://github.com/damygoes/url-analyzer"
+      },
+      {
+        "title": "Reflect – Wellness- & Journaling-App",
+        "description": "Eine wunderschöne React Native App für Stimmungs-Tracking, Journaling und Achtsamkeit. Betrieben mit Expo und Supabase.",
+        "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
+        "image": "/reflect-app.png",
+        "github": "https://github.com/damygoes/reflect"
+      },
+      {
+        "title": "KPI Bot – Stripe Metrics Dashboard",
+        "description": "Ein SaaS-Dashboard, das sich mit Stripe-Konten verbindet, um Echtzeit-Abonnementmetriken wie MRR, ARR, Churn-Rate und mehr zu visualisieren.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Stripe API",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "Recharts",
+          "Shadcn UI"
+        ],
+        "image": "/placeholder.jpg",
+        "github": "https://github.com/damygoes/kpi-bot"
+      },
+      {
+        "title": "Archetype – Microservices Architektur Case Study",
+        "description": "Eine skalierbare Node.js Microservices-Architektur mit geteilten TypeORM-Modellen, modularer Monorepo-Struktur und unabhängiger Service-Bereitstellung. Gebaut mit Docker, Express und Lerna.",
+        "tech": [
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "TypeORM",
+          "Lerna",
+          "Docker",
+          "MySQL"
+        ],
+        "image": "/archetype-project.png",
+        "github": "https://github.com/damygoes/archetype"
+      }
+    ]
+  },
+  "Skills": {
+    "title": "Technische Fähigkeiten",
+    "category": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Datenbank",
+      "devops_tools_architecture": "DevOps, Tools & Architektur"
+    }
+  },
+  "Contact": {
+    "title": "Lass uns zusammenarbeiten",
+    "subtitle": "Bereit, deine Ideen zum Leben zu erwecken? Lass uns über dein nächstes Projekt sprechen und gemeinsam etwas Großartiges schaffen."
+  },
+  "Footer": {
+    "copyright": "© 2025 Damilola Bada. Alle Rechte vorbehalten.",
+    "info": "Mit Liebe in Deutschland entwickelt"
+  }
+}

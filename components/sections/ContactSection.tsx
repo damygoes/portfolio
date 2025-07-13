@@ -3,6 +3,7 @@
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { contacts } from '@/lib/constants';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Footer from '../layout/Footer';
 import { Section } from '../layout/Section';
@@ -19,28 +20,32 @@ const ContactLink = ({ icon, title, link }: (typeof contacts)[0]) => (
   </Link>
 );
 
-const ContactSection = () => (
-  <Section id="contact" className="flex flex-col items-center justify-between">
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <SectionHeading
-        title="Let's Work Together"
-        subtitle="Ready to bring your ideas to life? Let's discuss your next project and create something amazing together."
-      />
+const ContactSection = () => {
+  const t = useTranslations('Contact');
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-xl mx-auto grid md:grid-cols-3 gap-8 mb-12"
-      >
-        {contacts.map((contact) => (
-          <ContactLink key={contact.title} {...contact} />
-        ))}
-      </motion.div>
-    </div>
-    <Footer />
-  </Section>
-);
+  return (
+    <Section
+      id="contact"
+      className="flex flex-col items-center justify-between"
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading title={t('title')} subtitle={t('subtitle')} />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-xl mx-auto grid md:grid-cols-3 gap-8 mb-12"
+        >
+          {contacts.map((contact) => (
+            <ContactLink key={contact.title} {...contact} />
+          ))}
+        </motion.div>
+      </div>
+      <Footer />
+    </Section>
+  );
+};
 
 export default ContactSection;

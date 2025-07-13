@@ -2,7 +2,9 @@
 
 import { navLinks } from '@/lib/constants';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { FC } from 'react';
+import { LanguageSwitch } from '../shared/language-switch/LanguageSwitch';
 import { ModeToggle } from '../shared/ModeToggle';
 import { Button } from '../ui/button';
 
@@ -12,6 +14,7 @@ type NavbarProps = {
 };
 
 const Navbar: FC<NavbarProps> = ({ activeSection, scrollToSection }) => {
+  const t = useTranslations('Navigation');
   return (
     <nav className="sticky top-4 z-50 backdrop-blur-sm w-fit mx-auto rounded-full px-8 py-4 bg-card shadow-md">
       <div className="flex justify-between items-center gap-24">
@@ -39,11 +42,14 @@ const Navbar: FC<NavbarProps> = ({ activeSection, scrollToSection }) => {
                 }
                 className="hover:text-primary hover:bg-transparent"
               >
-                {item}
+                {t(item)}
               </Button>
             ))}
           </div>
-          <ModeToggle />
+          <div className="flex items-center gap-4 justify-end">
+            <ModeToggle />
+            <LanguageSwitch />
+          </div>
         </div>
       </div>
     </nav>
