@@ -10,22 +10,22 @@
     "tagline": "Fullstack-Entwickler · React · TypeScript · Node.js",
     "greeting": "Hi, ich bin",
     "name": "Damilola Bada",
-    "description_1": "Ich entwickle Web- und Mobile-Apps, die einfach funktionieren – sauber, schnell und benutzerfreundlich. Mit über",
+    "description_1": "ich entwickle Web- und Mobile-Apps, die einfach funktionieren – sauber, schnell und benutzerfreundlich. Mit über",
     "years": "3 Jahren",
-    "description_2": "Erfahrung liebe ich es, Ideen in die Realität umzusetzen und echte Probleme für echte Menschen zu lösen.",
+    "description_2": "Erfahrung liebe ich es, Ideen in die Realität umzusetzen und echte Probleme für Menschen zu lösen.",
     "cta": "Sieh dir meine Arbeit an",
     "download_cv": "Lebenslauf herunterladen"
   },
   "About": {
     "title": "Über mich",
     "paragraphs": {
-      "one": "Ich habe mit Fullstack-Entwicklung begonnen, weil ich Dinge bauen wollte, die den Menschen wirklich helfen. Was als Neugier begann, wurde schnell zu einer Leidenschaft, Web- und Mobile-Apps zu entwickeln, die einfach funktionieren – ohne unnötige Komplikationen.",
+      "one": "ich habe mit Fullstack-Entwicklung begonnen, weil ich Lösungen finden wollte, die den Menschen bei realen Problemen helfen. Was als Neugier begann, wurde schnell zu einer Leidenschaft, Web- und Mobile-Apps zu entwickeln, die einfach funktionieren – ohne unnötige Komplikationen.",
       "two": "Auf dem Weg habe ich mir React und Next.js im Frontend sowie Node.js und NestJS im Backend selbst beigebracht. Für mich ist es wichtig, klaren und leicht wartbaren Code zu schreiben – das bedeutet weniger Kopfschmerzen für alle, besonders für die Menschen, mit denen ich zusammenarbeite.",
       "three": "Ich glaube daran, dass Technologie echte Probleme einfach und zuverlässig lösen sollte – das motiviert mich jeden Tag. Deshalb arbeite ich gerne mit Menschen zusammen, die daran interessiert sind, die richtigen Dinge für diejenigen zu bauen, die sie tatsächlich nutzen.",
       "four": "Jedes Projekt ist eine neue Chance zu lernen und etwas zu bewirken. Ich freue mich darauf, weiter zu wachsen – sowohl als Entwickler als auch als Teil der Teams, mit denen ich zusammenarbeite."
     },
     "cta": "Wenn du neugierig bist und mehr erfahren möchtest oder über ein sinnvolles Projekt sprechen willst, zögere nicht,",
-    "link": "kontakt aufzunehmen"
+    "link": "Kontakt aufzunehmen"
   },
   "Experience": {
     "title": "Erfahrung",
