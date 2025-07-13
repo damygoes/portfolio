@@ -1,0 +1,184 @@
+{
+  "Navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "tagline": "Fullstack Developer · React · TypeScript · Node.js",
+    "greeting": "Hi, I’m",
+    "name": "Damilola Bada",
+    "description_1": "I build web and mobile apps that just work — clean, fast, and easy to use. With over",
+    "years": "3 years",
+    "description_2": "of experience, I love turning ideas into reality and solving real problems for real people.",
+    "cta": "Check Out My Work",
+    "download_cv": "Download CV"
+  },
+  "About": {
+    "title": "About Me",
+    "paragraphs": {
+      "one": "I got into fullstack development because I wanted to build things that actually help people. What started as curiosity quickly turned into a passion for building web and mobile apps that just get the job done — without over-complicating things.",
+      "two": "Along the way, I taught myself React and Next.js on the frontend, and Node.js and NestJS on the backend. Writing code that’s clear and easy to fix is important to me — it means less headaches for everyone, especially the people I work with.",
+      "three": "I believe technology should solve real problems simply and reliably — that’s what motivates me every day. That’s also why I enjoy collaborating with people who care about building the right things for the people who actually use them.",
+      "four": "Every project is a new chance to learn and make a difference, and I’m excited to keep growing, both as a developer and as part of the teams I work with."
+    },
+    "cta": "If you’re curious to learn more or want to chat about building something meaningful, feel free to",
+    "link": "reach out"
+  },
+  "Experience": {
+    "title": "Experience",
+    "experiences": [
+      {
+        "title": "Team Lead",
+        "company": "apomap GmbH",
+        "location": "Winterberg, Germany (Hybrid)",
+        "period": "Jan. 2025 - Present",
+        "description": "Leading development and team management for a SaaS logistics platform.",
+        "responsibilities": [
+          "Mentor and conduct code reviews for a team of 3 developers",
+          "Manage project timelines and ensure quality deliverables",
+          "Implement and maintain CI/CD pipelines to streamline deployments",
+          "Conducted interviews and onboarding for new developers",
+          "Collaborated with product managers to define project requirements"
+        ]
+      },
+      {
+        "title": "Fullstack Developer",
+        "company": "apomap GmbH",
+        "location": "Winterberg, Germany (Hybrid)",
+        "period": "Nov. 2022 - Dec. 2024",
+        "description": "Built and maintained scalable frontend and backend features for the logistics SaaS platform.",
+        "responsibilities": [
+          "Designed GraphQL APIs for efficient data retrieval",
+          "Developed responsive UIs with React and Tailwind CSS",
+          "Optimized performance for a React-based web application",
+          "Integrated third-party logistics and POS APIs to enhance pharmacy operations"
+        ]
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "MyCodeCareer",
+        "location": "Boston (MA), USA (Remote)",
+        "period": "Sep. 2022 - Nov. 2022",
+        "description": "Focused on rebuilding and improving web application interfaces.",
+        "responsibilities": [
+          "Collaborated with UX designers to enhance UI workflows",
+          "Rebuilt company website using modern React best practices"
+        ]
+      },
+      {
+        "title": "Frontend Developer (Trainee)",
+        "company": "Brainnest GmbH",
+        "location": "Bremen, Germany (Remote)",
+        "period": "Jun. 2022 - Jul. 2022",
+        "description": "Gained hands-on experience developing responsive web applications.",
+        "responsibilities": [
+          "Worked with team members to build UI components",
+          "Reviewed code and provided feedback on frontend implementation",
+          "Applied web development best practices"
+        ]
+      },
+      {
+        "title": "Self-taught Fullstack Developer",
+        "company": "Freelance & Personal Projects",
+        "location": "Germany",
+        "period": "Jun. 2020 - May. 2022",
+        "description": "Built personal and freelance websites while self-teaching fullstack development.",
+        "responsibilities": [
+          "Built and managed websites using WordPress, Elementor, React, and Node.js",
+          "Collaborated with small businesses to improve their online presence",
+          "Practiced fullstack concepts including authentication, APIs, and deployment"
+        ]
+      },
+      {
+        "title": "Career Transition",
+        "company": "Personal",
+        "location": "Germany",
+        "period": "Jan. 2020 - May. 2020",
+        "description": "Took a short career break during the COVID-19 lockdown to reflect and plan a transition into tech.",
+        "responsibilities": [
+          "Researched the tech industry and self-learning opportunities",
+          "Mapped out a long-term goal to transition into software development"
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "title": "Projects",
+    "projects": [
+      {
+        "title": "URL Analyzer – URL Metadata Scraper",
+        "description": "A web app that fetches and displays metadata from any URL, including title, headings, broken links, and more. Built with React and Go.",
+        "tech": [
+          "Golang",
+          "Gin (Go Framework)",
+          "React",
+          "Typescript",
+          "Vite",
+          "Tailwind CSS",
+          "Tanstack Query",
+          "Zustand",
+          "Docker"
+        ],
+        "image": "/url-analyzer.png",
+        "github": "https://github.com/damygoes/url-analyzer"
+      },
+      {
+        "title": "Reflect – Wellness & Journaling App",
+        "description": "A beautifully glassy React Native app for mood tracking, journaling, and mindfulness. Powered by Expo and Supabase.",
+        "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
+        "image": "/reflect-app.png",
+        "github": "https://github.com/damygoes/reflect"
+      },
+      {
+        "title": "KPI Bot – Stripe Metrics Dashboard",
+        "description": "A SaaS dashboard that connects to Stripe accounts to visualize real-time subscription metrics like MRR, ARR, churn rate, and more.",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Stripe API",
+          "Drizzle ORM",
+          "PostgreSQL",
+          "Recharts",
+          "Shadcn UI"
+        ],
+        "image": "/placeholder.jpg",
+        "github": "https://github.com/damygoes/kpi-bot"
+      },
+      {
+        "title": "Archetype – Microservices Architecture Case Study",
+        "description": "A scalable Node.js microservices architecture with shared TypeORM models, modular monorepo setup, and independent service deployment. Built with Docker, Express, and Lerna.",
+        "tech": [
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "TypeORM",
+          "Lerna",
+          "Docker",
+          "MySQL"
+        ],
+        "image": "/archetype-project.png",
+        "github": "https://github.com/damygoes/archetype"
+      }
+    ]
+  },
+  "Skills": {
+    "title": "Technical Skills",
+    "category": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "devops_tools_architecture": "DevOps, Tools & Architecture"
+    }
+  },
+  "Contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something amazing together."
+  },
+  "Footer": {
+    "copyright": "© 2025 Damilola Bada. All rights reserved.",
+    "info": "Built with love from Germany"
+  }
+}
