@@ -1,22 +1,20 @@
 'use client';
 
 import {
-  DEFAULT_LOCALE,
-  type Locale,
-  LOCALE_LABELS,
-  SUPPORTED_LOCALES,
-} from '@/lib/i18n/config';
-import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
-
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { replaceLocaleInPath } from './utils';
+import {
+  DEFAULT_LOCALE,
+  type Locale,
+  LOCALE_LABELS,
+  SUPPORTED_LOCALES,
+} from '@/lib/i18n/config';
+import { usePathname, useRouter } from '@/lib/i18n/navigation';
+import { useLocale } from 'next-intl';
 
 type Props = {
   __storybookLocaleOverride?: Locale;
@@ -39,13 +37,15 @@ export function LanguageSwitch({
 
   const handleLocaleChange = (locale: Locale) => {
     if (onLocaleChange) {
-      // Storybook interactive mode: only update state, skip router.push
       onLocaleChange(locale);
       return;
     }
-    // Real app mode: update URL
-    const newPath = replaceLocaleInPath(pathname, locale);
-    router.push(newPath);
+
+    // Save scroll position before navigation
+    sessionStorage.setItem('scrollY', window.scrollY.toString());
+
+    // Navigate to new locale (triggers reload, but scroll will be restored)
+    router.push(pathname, { locale });
   };
 
   return (

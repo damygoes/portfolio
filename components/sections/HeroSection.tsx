@@ -98,7 +98,11 @@ const HeroSection = ({ scrollToSection }: Props) => {
             {t('cta')} <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link href={locale === 'de' ? '/lebenslauf.pdf' : '/resume.pdf'} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={locale === 'de' ? '/lebenslauf.pdf' : '/resume.pdf'}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Download className="mr-2 h-4 w-4" /> {t('download_cv')}
             </Link>
           </Button>

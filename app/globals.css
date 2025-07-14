@@ -45,7 +45,9 @@
 
 :root {
   --radius: 0.65rem;
-  --background: oklch(0.98 0.005 280); /* very light gray with slight purple hue */
+  --background: oklch(
+    0.98 0.005 280
+  ); /* very light gray with slight purple hue */
   --foreground: oklch(0.15 0.01 280); /* dark gray/purple */
   --card: var(--background);
   --card-foreground: var(--foreground);
