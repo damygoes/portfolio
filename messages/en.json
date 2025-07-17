@@ -126,11 +126,11 @@
         "github": "https://github.com/damygoes/url-analyzer"
       },
       {
-        "title": "Reflect – Wellness & Journaling App",
-        "description": "A beautifully glassy React Native app for mood tracking, journaling, and mindfulness. Powered by Expo and Supabase.",
+        "title": "Myndscape — A Wellness & Journaling Mobile App",
+        "description": "A beautiful minimalistic mobile journaling app designed to help you gain mental clarity, build self-awareness, and track your emotional well-being. Built using React Native, Expo, and Supabase, it features a calm, glassy UI with secure authentication and real-time storage.",
         "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
-        "image": "/reflect-app.png",
-        "github": "https://github.com/damygoes/reflect"
+        "image": "/myndscape.png",
+        "github": "https://github.com/damygoes/myndscape"
       },
       {
         "title": "KPI Bot – Stripe Metrics Dashboard",

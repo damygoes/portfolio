@@ -7,7 +7,7 @@ import {
   Mail,
   Server,
 } from 'lucide-react';
-import { Contacts, Experiences, Projects, Skills } from './types';
+import { Contacts, Experiences, Skills } from './types';
 
 export const sections = [
   'hero',
@@ -111,69 +111,7 @@ export const experiences: Experiences = [
   },
 ];
 
-export const projects: Projects = [
-  {
-    title: 'URL Analyzer – URL Metadata Scraper',
-    description:
-      'A web app that fetches and displays metadata from any URL, including title, headings, broken links, and more. Built with React and Go.',
-    tech: [
-      'Golang',
-      'Gin (Go Framework)',
-      'React',
-      'Typescript',
-      'Vite',
-      'Tailwind CSS',
-      'Tanstack Query',
-      'Zustand',
-      'Docker',
-    ],
-    image: '/url-analyzer.png',
-    github: 'https://github.com/damygoes/url-analyzer',
-    // demo: "https://expo.dev/@yourusername/reflect-app",
-  },
-  {
-    title: 'Reflect – Wellness & Journaling App',
-    description:
-      'A beautifully glassy React Native app for mood tracking, journaling, and mindfulness. Powered by Expo and Supabase.',
-    tech: ['React Native', 'Expo', 'Supabase', 'TypeScript'],
-    image: '/reflect-app.png',
-    github: 'https://github.com/damygoes/reflect',
-    // demo: "https://expo.dev/@yourusername/reflect-app",
-  },
-  {
-    title: 'KPI Bot – Stripe Metrics Dashboard',
-    description:
-      'A SaaS dashboard that connects to Stripe accounts to visualize real-time subscription metrics like MRR, ARR, churn rate, and more.',
-    tech: [
-      'Next.js',
-      'TypeScript',
-      'Stripe API',
-      'Drizzle ORM',
-      'PostgreSQL',
-      'Recharts',
-      'Shadcn UI',
-    ],
-    image: '/placeholder.jpg',
-    github: 'https://github.com/damygoes/kpi-bot',
-    // demo: "https://kpi-bot.example.com",
-  },
-  {
-    title: 'Archetype – Microservices Architecture Case Study',
-    description:
-      'A scalable Node.js microservices architecture with shared TypeORM models, modular monorepo setup, and independent service deployment. Built with Docker, Express, and Lerna.',
-    tech: [
-      'TypeScript',
-      'Node.js',
-      'Express',
-      'TypeORM',
-      'Lerna',
-      'Docker',
-      'MySQL',
-    ],
-    image: '/archetype-project.png',
-    github: 'https://github.com/damygoes/archetype',
-  },
-];
+//"demo": "https://expo.dev/@yourusername/reflect-app"
 
 export const skills: Skills = [
   {
