@@ -1,9 +1,9 @@
-import { AnimatedBackground } from '@/components/layout/AnimatedBackground';
+import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 import { routing } from '@/lib/i18n/routing';
 import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, Geist, Geist_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import '../globals.css';
 
@@ -17,8 +17,16 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const bricolage = Bricolage_Grotesque({
+  variable: '--font-display',
+  subsets: ['latin'],
+  axes: ['opsz', 'wdth'],
+});
+
 export const metadata: Metadata = {
-  title: 'Damilola Bada | Portfolio',
+  title: 'Damilola Bada — Fullstack Developer',
+  description:
+    'Fullstack developer based in Germany, building clean and fast web and mobile applications with React, Next.js, Node.js, and Go.',
   keywords: [
     'Damilola Bada',
     'Portfolio',
@@ -45,11 +53,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Damilola Bada', url: 'https://damilolabada.com' }],
   creator: 'Damilola Bada',
   openGraph: {
-    title: 'Damilola Bada | Portfolio',
+    title: 'Damilola Bada — Fullstack Developer',
     description:
-      'Explore the portfolio of Damilola Bada, a software engineer specializing in full-stack development with expertise in React, Next.js, and Node.js.',
+      'Fullstack developer based in Germany, building clean and fast web and mobile applications with React, Next.js, Node.js, and Go.',
     url: 'https://damilolabada.com',
-    siteName: 'Damilola Bada | Portfolio',
+    siteName: 'Damilola Bada — Fullstack Developer',
   },
 };
 
@@ -69,17 +77,16 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable} antialiased bg-background relative`}
       >
         <NextIntlClientProvider>
-          <AnimatedBackground />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <SmoothScrollProvider>{children}</SmoothScrollProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

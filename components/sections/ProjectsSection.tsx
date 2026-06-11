@@ -1,25 +1,51 @@
 'use client';
 
+import { DrawnLine } from '@/components/animation/DrawnLine';
+import { Reveal } from '@/components/animation/Reveal';
 import { SectionHeading } from '@/components/layout/SectionHeading';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { MOTION_OK, POINTER_FINE } from '@/lib/animations';
 import { Project } from '@/lib/types';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 import { Section } from '../layout/Section';
-import { ProjectCard } from '../projects/ProjectCard';
+import { ProjectHoverPreview } from '../projects/ProjectHoverPreview';
+import { ProjectListItem } from '../projects/ProjectListItem';
 
 const ProjectsSection = () => {
   const t = useTranslations('Projects');
   const projects = t.raw('projects') as Project[];
 
+  const pointerFine = useMediaQuery(POINTER_FINE);
+  const motionOk = useMediaQuery(MOTION_OK);
+  const showHoverPreview = pointerFine && motionOk;
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   return (
     <Section id="projects">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading title={t('title')} />
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
-          ))}
-        </div>
+      <SectionHeading index="03" title={t('title')} />
+
+      <div>
+        <DrawnLine />
+        {projects.map((project, index) => (
+          <Reveal key={project.title}>
+            <ProjectListItem
+              project={project}
+              index={index}
+              onHoverChange={
+                showHoverPreview
+                  ? (hovering) => setActiveIndex(hovering ? index : null)
+                  : undefined
+              }
+            />
+            <DrawnLine />
+          </Reveal>
+        ))}
       </div>
+
+      {showHoverPreview && (
+        <ProjectHoverPreview projects={projects} activeIndex={activeIndex} />
+      )}
     </Section>
   );
 };

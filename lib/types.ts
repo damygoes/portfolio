@@ -1,22 +1,18 @@
-import { JSX } from 'react';
-
 export type Project = {
   title: string;
   description: string;
   tech: string[];
   image: string;
-  github: string;
+  github?: string;
   demo?: string;
 };
 
 export type Skill = {
-  icon: JSX.Element;
   title: string;
   skills: string[];
 };
 
 export type Contact = {
-  icon: JSX.Element;
   title: string;
   link: string;
 };

@@ -1,75 +1,72 @@
+'use client';
+
+import { Reveal } from '@/components/animation/Reveal';
+import { SplitTextReveal } from '@/components/animation/SplitTextReveal';
 import { SectionHeading } from '@/components/layout/SectionHeading';
-import { aboutMeTexts } from '@/lib/constants';
-import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Section } from '../layout/Section';
 
 const AboutSection = () => {
   const t = useTranslations('About');
 
   return (
-    <Section id="about" className="bg-background/50 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading title={t('title')} />
+    <Section id="about">
+      <SectionHeading index="01" title={t('title')} />
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mt-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            whileHover={{ scale: 1.1, rotate: 3, y: -5 }}
-            transition={{
-              duration: 0.5,
-              type: 'spring',
-              stiffness: 120,
-              damping: 12,
-            }}
-            viewport={{ once: true }}
-            className="flex justify-center"
+      <div className="grid gap-12 md:grid-cols-[5fr_7fr] md:gap-20">
+        <div>
+          <Reveal className="md:sticky md:top-32">
+            <div className="group relative aspect-[4/5] overflow-clip rounded-sm">
+              <Image
+                src="/avatar.jpg"
+                alt="Damilola Bada"
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover object-top grayscale transition-all duration-700 group-hover:scale-[1.03] group-hover:grayscale-0"
+              />
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="flex flex-col gap-8">
+          <SplitTextReveal
+            as="p"
+            className="font-display text-2xl font-medium leading-snug md:text-3xl"
           >
-            <Image
-              src="/avatar.jpg"
-              alt="Damilola Bada"
-              width={500}
-              height={500}
-              priority
-              className="select-none rounded-r-full shadow-lg border-4 border-primary"
-            />
-          </motion.div>
+            {t('paragraphs.one')}
+          </SplitTextReveal>
 
-          <div className="space-y-6 text-lg leading-relaxed text-foreground max-w-xl mx-auto">
-            {aboutMeTexts.map((text, i) => (
-              <motion.p
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                {t(`paragraphs.${text}`)}
-              </motion.p>
-            ))}
+          <Reveal>
+            <p className="leading-relaxed text-muted-foreground">
+              {t('paragraphs.two')}
+            </p>
+          </Reveal>
+          <Reveal>
+            <p className="leading-relaxed text-muted-foreground">
+              {t('paragraphs.three')}
+            </p>
+          </Reveal>
+          <Reveal>
+            <p className="leading-relaxed text-muted-foreground">
+              {t('paragraphs.four')}
+            </p>
+          </Reveal>
 
-            <motion.p
-              className="text-foreground"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
+          <Reveal>
+            <p className="leading-relaxed text-muted-foreground">
               {t('cta')}{' '}
-              <Link
+              <a
                 href="https://www.linkedin.com/in/damilolabada/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-medium underline underline-offset-2 hover:opacity-80 transition"
+                className="font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:decoration-primary"
               >
                 {t('link')}
-              </Link>
+              </a>
               .
-            </motion.p>
-          </div>
+            </p>
+          </Reveal>
         </div>
       </div>
     </Section>

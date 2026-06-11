@@ -1,10 +1,14 @@
 'use client';
 
+import { useLenis } from '@/components/providers/SmoothScrollProvider';
 import { sections } from '@/lib/constants';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+
+const NAV_OFFSET = -80;
 
 export function useScrollSection() {
   const [activeSection, setActiveSection] = useState('hero');
+  const lenis = useLenis();
 
   useEffect(() => {
     const options = {
@@ -37,14 +41,22 @@ export function useScrollSection() {
     };
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -80; // adjust if you have a sticky navbar
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
+  const scrollToSection = useCallback(
+    (id: string) => {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      if (lenis) {
+        // force: scroll even if Lenis is stopped (e.g. mobile menu just closed)
+        lenis.scrollTo(element, { offset: NAV_OFFSET, force: true });
+      } else {
+        const y =
+          element.getBoundingClientRect().top + window.scrollY + NAV_OFFSET;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    },
+    [lenis]
+  );
 
   return { activeSection, scrollToSection };
 }
