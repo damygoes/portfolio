@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import puppeteer from 'puppeteer-core';
 
-const BASE = 'http://localhost:3001';
+const BASE = process.env.BASE_URL ?? 'http://localhost:3000';
 const OUT = '/tmp/portfolio-verify';
 const CHROME =
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';

@@ -13,7 +13,7 @@
     "lastName": "Bada",
     "role": "Fullstack Developer",
     "location": "Based in Germany",
-    "experience": "3+ yrs experience",
+    "experience": "4+ yrs experience",
     "description": "I build web and mobile apps that just work — clean, fast, and easy to use. I love turning ideas into reality and solving real problems for people.",
     "cta": "Selected Work",
     "download_cv": "Download CV",
@@ -22,10 +22,10 @@
   "About": {
     "title": "About Me",
     "paragraphs": {
-      "one": "I got into fullstack development because I wanted to build things that actually help people. What started as curiosity quickly turned into a passion for building web and mobile apps that just get the job done — without over-complicating things.",
-      "two": "Along the way, I taught myself React and Next.js on the frontend, and Node.js and NestJS on the backend. Writing code that’s clear and easy to fix is important to me — it means less headaches for everyone, especially the people I work with.",
-      "three": "I believe technology should solve real problems simply and reliably — that’s what motivates me every day. That’s also why I enjoy collaborating with people who care about building the right things for the people who actually use them.",
-      "four": "Every project is a new chance to learn and make a difference, and I’m excited to keep growing, both as a developer and as part of the teams I work with."
+      "one": "I got into fullstack development because I wanted to build things that actually help people. What started as curiosity is now my profession — building web and mobile apps that just get the job done, without over-complicating things.",
+      "two": "These days I work as a Software Engineer at adesso, building tailored software for companies and public organisations. Before that I led a small engineering team at apomap — where I learned that clear code and clear communication matter equally.",
+      "three": "I believe technology should solve real problems simply and reliably. That belief carries into my own products too — like ElliesNote, a health companion for people living with energy-limiting chronic conditions.",
+      "four": "Every project is a new chance to learn and make a difference, and I’m excited to keep growing — as an engineer, a teammate, and a builder."
     },
     "cta": "If you’re curious to learn more or want to chat about building something meaningful, feel free to",
     "link": "reach out"
@@ -36,10 +36,18 @@
     "hide_details": "Close",
     "experiences": [
       {
+        "title": "Software Engineer",
+        "company": "adesso SE",
+        "location": "Karlsruhe, Germany",
+        "period": "Nov. 2025 - Present",
+        "description": "Building tailored software solutions at one of Europe's leading IT service providers — helping companies and public organisations strengthen their core business processes and achieve digital excellence.",
+        "responsibilities": []
+      },
+      {
         "title": "Team Lead",
         "company": "apomap GmbH",
         "location": "Winterberg, Germany (Hybrid)",
-        "period": "Jan. 2025 - Present",
+        "period": "Jan. 2025 - Sep. 2025",
         "description": "Leading development and team management for a SaaS logistics platform.",
         "responsibilities": [
           "Mentor and conduct code reviews for a team of 3 developers",
@@ -115,6 +123,20 @@
     "title": "Selected Work",
     "projects": [
       {
+        "title": "ElliesNote",
+        "description": "A privacy-first health companion for people with energy-limiting chronic conditions like ME/CFS and fibromyalgia. Gentle 30-second daily check-ins, crash-day logging, Apple Health sync, and AI-powered insights that reveal the patterns behind good and bad days. Live on the App Store.",
+        "tech": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Next.js (API)",
+          "NeonDB (PostgreSQL)",
+          "QStash"
+        ],
+        "image": "/elliesnote.png",
+        "demo": "https://elliesnote.cc"
+      },
+      {
         "title": "URL Analyzer",
         "description": "A web app that fetches and displays metadata from any URL, including title, headings, broken links, and more. Built with React and Go.",
         "tech": [
@@ -130,13 +152,6 @@
         ],
         "image": "/url-analyzer.png",
         "github": "https://github.com/damygoes/url-analyzer"
-      },
-      {
-        "title": "Myndscape",
-        "description": "A beautiful minimalistic mobile journaling app designed to help you gain mental clarity, build self-awareness, and track your emotional well-being. Built using React Native, Expo, and Supabase, it features a calm, glassy UI with secure authentication and real-time storage.",
-        "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
-        "image": "/myndscape.png",
-        "github": "https://github.com/damygoes/myndscape"
       },
       {
         "title": "KPI Bot",

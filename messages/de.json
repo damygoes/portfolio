@@ -13,7 +13,7 @@
     "lastName": "Bada",
     "role": "Fullstack-Entwickler",
     "location": "Wohnhaft in Deutschland",
-    "experience": "3+ Jahre Erfahrung",
+    "experience": "4+ Jahre Erfahrung",
     "description": "Ich entwickle Web- und Mobile-Apps, die einfach funktionieren – sauber, schnell und benutzerfreundlich. Ich liebe es, Ideen in die Realität umzusetzen und echte Probleme für Menschen zu lösen.",
     "cta": "Ausgewählte Arbeiten",
     "download_cv": "Lebenslauf herunterladen",
@@ -22,10 +22,10 @@
   "About": {
     "title": "Über mich",
     "paragraphs": {
-      "one": "ich habe mit Fullstack-Entwicklung begonnen, weil ich Lösungen finden wollte, die den Menschen bei realen Problemen helfen. Was als Neugier begann, wurde schnell zu einer Leidenschaft, Web- und Mobile-Apps zu entwickeln, die einfach funktionieren – ohne unnötige Komplikationen.",
-      "two": "Auf dem Weg habe ich mir React und Next.js im Frontend sowie Node.js und NestJS im Backend selbst beigebracht. Für mich ist es wichtig, klaren und leicht wartbaren Code zu schreiben – das bedeutet weniger Kopfschmerzen für alle, besonders für die Menschen, mit denen ich zusammenarbeite.",
-      "three": "Ich glaube daran, dass Technologie echte Probleme einfach und zuverlässig lösen sollte – das motiviert mich jeden Tag. Deshalb arbeite ich gerne mit Menschen zusammen, die daran interessiert sind, die richtigen Dinge für diejenigen zu bauen, die sie tatsächlich nutzen.",
-      "four": "Jedes Projekt ist eine neue Chance zu lernen und etwas zu bewirken. Ich freue mich darauf, weiter zu wachsen – sowohl als Entwickler als auch als Teil der Teams, mit denen ich zusammenarbeite."
+      "one": "Ich habe mit Fullstack-Entwicklung begonnen, weil ich Dinge bauen wollte, die Menschen wirklich helfen. Was als Neugier begann, ist heute mein Beruf – Web- und Mobile-Apps zu entwickeln, die einfach funktionieren, ohne unnötige Komplikationen.",
+      "two": "Heute arbeite ich als Software Engineer bei adesso und entwickle maßgeschneiderte Software für Unternehmen und öffentliche Organisationen. Davor habe ich bei apomap ein kleines Engineering-Team geleitet – dort habe ich gelernt, dass klarer Code und klare Kommunikation gleichermaßen zählen.",
+      "three": "Ich glaube daran, dass Technologie echte Probleme einfach und zuverlässig lösen sollte. Diese Überzeugung trage ich auch in meine eigenen Produkte – wie ElliesNote, einen Gesundheitsbegleiter für Menschen mit energielimitierenden chronischen Erkrankungen.",
+      "four": "Jedes Projekt ist eine neue Chance zu lernen und etwas zu bewirken. Ich freue mich darauf, weiter zu wachsen – als Engineer, als Teamkollege und als Macher."
     },
     "cta": "Wenn du neugierig bist und mehr erfahren möchtest oder über ein sinnvolles Projekt sprechen willst, zögere nicht,",
     "link": "Kontakt aufzunehmen"
@@ -36,10 +36,18 @@
     "hide_details": "Schließen",
     "experiences": [
       {
+        "title": "Software Engineer",
+        "company": "adesso SE",
+        "location": "Karlsruhe, Deutschland",
+        "period": "Nov. 2025 - Heute",
+        "description": "Entwicklung maßgeschneiderter Softwarelösungen bei einem der führenden IT-Dienstleister Europas – wir unterstützen Unternehmen und öffentliche Organisationen dabei, ihre Kerngeschäftsprozesse zu stärken und digitale Exzellenz zu erreichen.",
+        "responsibilities": []
+      },
+      {
         "title": "Teamleiter",
         "company": "apomap GmbH",
         "location": "Winterberg, Deutschland (Hybrid)",
-        "period": "Jan. 2025 - Heute",
+        "period": "Jan. 2025 - Sep. 2025",
         "description": "Leitung der Entwicklung und Teammanagement für eine SaaS-Logistikplattform.",
         "responsibilities": [
           "Mentoring und Code-Reviews für ein Team von 3 Entwicklern",
@@ -115,6 +123,20 @@
     "title": "Ausgewählte Arbeiten",
     "projects": [
       {
+        "title": "ElliesNote",
+        "description": "Ein datenschutzfreundlicher Gesundheitsbegleiter für Menschen mit energielimitierenden chronischen Erkrankungen wie ME/CFS und Fibromyalgie. Sanfte 30-Sekunden-Check-ins, Crash-Tag-Protokollierung, Apple-Health-Synchronisierung und KI-gestützte Insights, die die Muster hinter guten und schlechten Tagen sichtbar machen. Live im App Store.",
+        "tech": [
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Next.js (API)",
+          "NeonDB (PostgreSQL)",
+          "QStash"
+        ],
+        "image": "/elliesnote.png",
+        "demo": "https://elliesnote.cc"
+      },
+      {
         "title": "URL Analyzer",
         "description": "Eine Web-App, die Metadaten von jeder URL abruft und anzeigt, einschließlich Titel, Überschriften, defekte Links und mehr. Gebaut mit React und Go.",
         "tech": [
@@ -130,13 +152,6 @@
         ],
         "image": "/url-analyzer.png",
         "github": "https://github.com/damygoes/url-analyzer"
-      },
-      {
-        "title": "Myndscape",
-        "description": "Eine wunderschön minimalistische mobile Journaling-App, die dir hilft, mentale Klarheit zu gewinnen, Selbstbewusstsein aufzubauen und dein emotionales Wohlbefinden zu verfolgen. Entwickelt mit React Native, Expo und Supabase – mit einer ruhigen, gläsernen Benutzeroberfläche, sicherer Authentifizierung und Echtzeitspeicherung.",
-        "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
-        "image": "/myndscape.png",
-        "github": "https://github.com/damygoes/myndscape"
       },
       {
         "title": "KPI Bot",
