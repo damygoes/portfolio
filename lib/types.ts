@@ -1,5 +1,3 @@
-import { JSX } from 'react';
-
 export type Project = {
   title: string;
   description: string;
@@ -10,13 +8,11 @@ export type Project = {
 };
 
 export type Skill = {
-  icon: JSX.Element;
   title: string;
   skills: string[];
 };
 
 export type Contact = {
-  icon: JSX.Element;
   title: string;
   link: string;
 };

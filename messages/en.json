@@ -2,19 +2,22 @@
   "Navigation": {
     "about": "About",
     "experience": "Experience",
-    "projects": "Projects",
+    "projects": "Work",
     "skills": "Skills",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
   },
   "Hero": {
-    "tagline": "Fullstack Developer · React · TypeScript · Node.js",
-    "greeting": "Hi, I’m",
-    "name": "Damilola Bada",
-    "description_1": "I build web and mobile apps that just work — clean, fast, and easy to use. With over",
-    "years": "3 years",
-    "description_2": "of experience, I love turning ideas into reality and solving real problems for people.",
-    "cta": "Check Out My Work",
-    "download_cv": "Download CV"
+    "firstName": "Damilola",
+    "lastName": "Bada",
+    "role": "Fullstack Developer",
+    "location": "Based in Germany",
+    "experience": "3+ yrs experience",
+    "description": "I build web and mobile apps that just work — clean, fast, and easy to use. I love turning ideas into reality and solving real problems for people.",
+    "cta": "Selected Work",
+    "download_cv": "Download CV",
+    "scroll": "(scroll)"
   },
   "About": {
     "title": "About Me",
@@ -29,6 +32,8 @@
   },
   "Experience": {
     "title": "Experience",
+    "show_details": "Details",
+    "hide_details": "Close",
     "experiences": [
       {
         "title": "Team Lead",
@@ -89,7 +94,8 @@
         "responsibilities": [
           "Built and managed websites using WordPress, Elementor, React, and Node.js",
           "Collaborated with small businesses to improve their online presence",
-          "Practiced fullstack concepts including authentication, APIs, and deployment"
+          "Practiced fullstack concepts including authentication, APIs, and deployment",
+          "Balanced self-learning with part-time work in logistics and delivery"
         ]
       },
       {
@@ -106,10 +112,10 @@
     ]
   },
   "Projects": {
-    "title": "Projects",
+    "title": "Selected Work",
     "projects": [
       {
-        "title": "URL Analyzer – URL Metadata Scraper",
+        "title": "URL Analyzer",
         "description": "A web app that fetches and displays metadata from any URL, including title, headings, broken links, and more. Built with React and Go.",
         "tech": [
           "Golang",
@@ -126,14 +132,14 @@
         "github": "https://github.com/damygoes/url-analyzer"
       },
       {
-        "title": "Myndscape — A Wellness & Journaling Mobile App",
+        "title": "Myndscape",
         "description": "A beautiful minimalistic mobile journaling app designed to help you gain mental clarity, build self-awareness, and track your emotional well-being. Built using React Native, Expo, and Supabase, it features a calm, glassy UI with secure authentication and real-time storage.",
         "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
         "image": "/myndscape.png",
         "github": "https://github.com/damygoes/myndscape"
       },
       {
-        "title": "KPI Bot – Stripe Metrics Dashboard",
+        "title": "KPI Bot",
         "description": "A SaaS dashboard that connects to Stripe accounts to visualize real-time subscription metrics like MRR, ARR, churn rate, and more.",
         "tech": [
           "Next.js",
@@ -148,7 +154,7 @@
         "github": "https://github.com/damygoes/kpi-bot"
       },
       {
-        "title": "Archetype – Microservices Architecture Case Study",
+        "title": "Archetype",
         "description": "A scalable Node.js microservices architecture with shared TypeORM models, modular monorepo setup, and independent service deployment. Built with Docker, Express, and Lerna.",
         "tech": [
           "TypeScript",
@@ -165,7 +171,7 @@
     ]
   },
   "Skills": {
-    "title": "Technical Skills",
+    "title": "Skills",
     "category": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -174,11 +180,12 @@
     }
   },
   "Contact": {
-    "title": "Let's Work Together",
-    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something amazing together."
-  },
-  "Footer": {
-    "copyright": "© 2025 Damilola Bada. All rights reserved.",
-    "info": "Built with love from Germany"
+    "line1": "Let’s work",
+    "line2": "together",
+    "subtitle": "Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.",
+    "email_label": "Say hello",
+    "copyright": "© {year} Damilola Bada. All rights reserved.",
+    "built": "Built with love from Germany",
+    "back_to_top": "Back to top"
   }
 }

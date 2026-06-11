@@ -5,21 +5,28 @@ interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   id: string;
   children: React.ReactNode;
   className?: string;
+  /** Set false for full-bleed content (e.g. marquees). */
+  contained?: boolean;
 }
 
 export const Section = ({
   id,
   className,
   children,
+  contained = true,
   ...props
 }: SectionProps) => {
   return (
     <section
       id={id}
-      className={cn('min-h-[100vh] scroll-mt-32 py-24', className)}
+      className={cn('scroll-mt-24 py-24 md:py-40', className)}
       {...props}
     >
-      {children}
+      {contained ? (
+        <div className="mx-auto max-w-[1440px] px-5 md:px-10">{children}</div>
+      ) : (
+        children
+      )}
     </section>
   );
 };

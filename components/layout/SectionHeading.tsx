@@ -1,21 +1,19 @@
-import { motion } from 'framer-motion';
+import { SplitTextReveal } from '@/components/animation/SplitTextReveal';
 import { FC } from 'react';
 
 type Props = {
+  index: string;
   title: string;
-  subtitle?: string;
 };
 
-export const SectionHeading: FC<Props> = ({ title, subtitle }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    className="text-center mb-16"
-  >
-    <h2 className="text-3xl font-bold mb-4">{title}</h2>
-    <div className="w-16 h-0.5 bg-primary mx-auto mb-2" />
-    {subtitle && <p className="text-lg max-w-2xl mx-auto">{subtitle}</p>}
-  </motion.div>
+export const SectionHeading: FC<Props> = ({ index, title }) => (
+  <div className="mb-14 md:mb-24">
+    <span className="text-meta block text-primary">({index})</span>
+    <SplitTextReveal
+      as="h2"
+      className="mt-3 font-display text-[clamp(2.25rem,7vw,5.5rem)] font-bold uppercase leading-[0.95] tracking-tight"
+    >
+      {title}
+    </SplitTextReveal>
+  </div>
 );

@@ -4,17 +4,20 @@
     "experience": "Erfahrung",
     "projects": "Projekte",
     "skills": "Fähigkeiten",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "close": "Schließen"
   },
   "Hero": {
-    "tagline": "Fullstack-Entwickler · React · TypeScript · Node.js",
-    "greeting": "Hi, ich bin",
-    "name": "Damilola Bada",
-    "description_1": "ich entwickle Web- und Mobile-Apps, die einfach funktionieren – sauber, schnell und benutzerfreundlich. Mit über",
-    "years": "3 Jahren",
-    "description_2": "Erfahrung liebe ich es, Ideen in die Realität umzusetzen und echte Probleme für Menschen zu lösen.",
-    "cta": "Sieh dir meine Arbeit an",
-    "download_cv": "Lebenslauf herunterladen"
+    "firstName": "Damilola",
+    "lastName": "Bada",
+    "role": "Fullstack-Entwickler",
+    "location": "Wohnhaft in Deutschland",
+    "experience": "3+ Jahre Erfahrung",
+    "description": "Ich entwickle Web- und Mobile-Apps, die einfach funktionieren – sauber, schnell und benutzerfreundlich. Ich liebe es, Ideen in die Realität umzusetzen und echte Probleme für Menschen zu lösen.",
+    "cta": "Ausgewählte Arbeiten",
+    "download_cv": "Lebenslauf herunterladen",
+    "scroll": "(scrollen)"
   },
   "About": {
     "title": "Über mich",
@@ -29,6 +32,8 @@
   },
   "Experience": {
     "title": "Erfahrung",
+    "show_details": "Details",
+    "hide_details": "Schließen",
     "experiences": [
       {
         "title": "Teamleiter",
@@ -89,7 +94,8 @@
         "responsibilities": [
           "Erstellung und Verwaltung von Websites mit WordPress, Elementor, React und Node.js",
           "Zusammenarbeit mit kleinen Unternehmen zur Verbesserung ihrer Online-Präsenz",
-          "Praxis im Fullstack-Bereich, einschließlich Authentifizierung, APIs und Deployment"
+          "Praxis im Fullstack-Bereich, einschließlich Authentifizierung, APIs und Deployment",
+          "Selbststudium parallel zu Teilzeitarbeit in Logistik und Lieferung"
         ]
       },
       {
@@ -106,10 +112,10 @@
     ]
   },
   "Projects": {
-    "title": "Projekte",
+    "title": "Ausgewählte Arbeiten",
     "projects": [
       {
-        "title": "URL Analyzer – URL Metadaten-Scraper",
+        "title": "URL Analyzer",
         "description": "Eine Web-App, die Metadaten von jeder URL abruft und anzeigt, einschließlich Titel, Überschriften, defekte Links und mehr. Gebaut mit React und Go.",
         "tech": [
           "Golang",
@@ -126,14 +132,14 @@
         "github": "https://github.com/damygoes/url-analyzer"
       },
       {
-        "title": "Myndscape — Wellness- & Journaling-App",
+        "title": "Myndscape",
         "description": "Eine wunderschön minimalistische mobile Journaling-App, die dir hilft, mentale Klarheit zu gewinnen, Selbstbewusstsein aufzubauen und dein emotionales Wohlbefinden zu verfolgen. Entwickelt mit React Native, Expo und Supabase – mit einer ruhigen, gläsernen Benutzeroberfläche, sicherer Authentifizierung und Echtzeitspeicherung.",
         "tech": ["React Native", "Expo", "Supabase", "TypeScript"],
         "image": "/myndscape.png",
         "github": "https://github.com/damygoes/myndscape"
       },
       {
-        "title": "KPI Bot – Stripe Metrics Dashboard",
+        "title": "KPI Bot",
         "description": "Ein SaaS-Dashboard, das sich mit Stripe-Konten verbindet, um Echtzeit-Abonnementmetriken wie MRR, ARR, Churn-Rate und mehr zu visualisieren.",
         "tech": [
           "Next.js",
@@ -148,7 +154,7 @@
         "github": "https://github.com/damygoes/kpi-bot"
       },
       {
-        "title": "Archetype – Microservices Architektur Case Study",
+        "title": "Archetype",
         "description": "Eine skalierbare Node.js Microservices-Architektur mit geteilten TypeORM-Modellen, modularer Monorepo-Struktur und unabhängiger Service-Bereitstellung. Gebaut mit Docker, Express und Lerna.",
         "tech": [
           "TypeScript",
@@ -165,7 +171,7 @@
     ]
   },
   "Skills": {
-    "title": "Technische Fähigkeiten",
+    "title": "Fähigkeiten",
     "category": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -174,11 +180,12 @@
     }
   },
   "Contact": {
-    "title": "Lass uns zusammenarbeiten",
-    "subtitle": "Bereit, deine Ideen zum Leben zu erwecken? Lass uns über dein nächstes Projekt sprechen und gemeinsam etwas Großartiges schaffen."
-  },
-  "Footer": {
-    "copyright": "© 2025 Damilola Bada. Alle Rechte vorbehalten.",
-    "info": "Mit Liebe in Deutschland entwickelt"
+    "line1": "Lass uns",
+    "line2": "zusammenarbeiten",
+    "subtitle": "Bereit, deine Ideen zum Leben zu erwecken? Lass uns über dein nächstes Projekt sprechen und gemeinsam etwas Großartiges schaffen.",
+    "email_label": "Sag hallo",
+    "copyright": "© {year} Damilola Bada. Alle Rechte vorbehalten.",
+    "built": "Mit Liebe in Deutschland entwickelt",
+    "back_to_top": "Nach oben"
   }
 }

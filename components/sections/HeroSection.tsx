@@ -1,122 +1,140 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, Download } from 'lucide-react';
+import { Magnetic } from '@/components/animation/Magnetic';
+import { DURATION, EASE, MOTION_OK, STAGGER } from '@/lib/animations';
+import { gsap, useGSAP } from '@/lib/gsap';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import Image from 'next/image';
 import Link from 'next/link';
-import { AnimatedBackground } from '../layout/AnimatedBackground';
+import { useRef } from 'react';
 import { Section } from '../layout/Section';
 
 type Props = {
   scrollToSection: (id: string) => void;
 };
 
-// Motion variants for staggered animation
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0 },
-};
+const ctaClass =
+  'group relative inline-flex items-center gap-1.5 pb-1 font-mono text-xs uppercase tracking-[0.15em] after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100';
 
 const HeroSection = ({ scrollToSection }: Props) => {
   const t = useTranslations('Hero');
   const locale = useLocale();
+  const ref = useRef<HTMLDivElement>(null);
 
-  console.log('Current locale:', locale); // For debugging or logic
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      mm.add(MOTION_OK, () => {
+        const tl = gsap.timeline({ defaults: { ease: EASE } });
+        tl.from('[data-hero-line]', {
+          yPercent: 110,
+          duration: DURATION.slow,
+          stagger: STAGGER * 1.5,
+          delay: 0.15,
+        })
+          .from(
+            '[data-hero-meta]',
+            { opacity: 0, y: 12, duration: DURATION.base, stagger: STAGGER },
+            '-=0.7'
+          )
+          .from(
+            '[data-hero-copy]',
+            { opacity: 0, y: 16, duration: DURATION.base, stagger: STAGGER },
+            '-=0.6'
+          );
+
+        gsap.to('[data-hero-arrow]', {
+          y: 6,
+          duration: 1.2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut',
+        });
+      });
+    },
+    { scope: ref }
+  );
 
   return (
-    <Section
-      id="hero"
-      className="relative flex items-center justify-center min-h-screen overflow-hidden"
-    >
-      {/* Animated glow background */}
-      <AnimatedBackground />
-
-      {/* Content */}
-      <motion.div
-        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
+    <Section id="hero" className="py-0 md:py-0">
+      <div
+        ref={ref}
+        className="flex min-h-svh flex-col justify-between pt-28 pb-8 md:pt-32"
       >
-        {/* Profile Image with pulsing ring */}
-        <motion.div variants={fadeUpVariants}>
-          <div className="relative w-42 h-42 mx-auto mb-6">
-            <div className="absolute inset-0 rounded-full animate-pulse ring-4 ring-primary/30" />
-            <Image
-              src="/avatar.jpg"
-              alt="Damilola Bada"
-              fill
-              className="rounded-full border-4 border-primary shadow-lg object-cover object-top-right select-none"
-            />
-          </div>
-        </motion.div>
+        <div className="text-meta flex flex-wrap gap-x-6 gap-y-1 text-muted-foreground">
+          <span data-hero-meta>{t('location')}</span>
+          <span data-hero-meta className="hidden sm:inline">
+            ·
+          </span>
+          <span data-hero-meta>{t('role')}</span>
+          <span data-hero-meta className="hidden sm:inline">
+            ·
+          </span>
+          <span data-hero-meta>{t('experience')}</span>
+        </div>
 
-        {/* Tagline */}
-        <motion.p
-          className="text-sm text-muted-foreground uppercase tracking-wide mb-3"
-          variants={fadeUpVariants}
-        >
-          {t('tagline')}
-        </motion.p>
+        <div>
+          <h1 className="font-display text-[clamp(3.25rem,13vw,11.5rem)] font-extrabold uppercase leading-[0.86] tracking-tight">
+            <span className="block" data-clip>
+              <span className="block" data-hero-line>
+                {t('firstName')}
+              </span>
+            </span>
+            <span className="block" data-clip>
+              <span className="text-stroke block" data-hero-line>
+                {t('lastName')}
+                <span className="text-primary [-webkit-text-stroke:0] [color:var(--primary)]">
+                  .
+                </span>
+              </span>
+            </span>
+          </h1>
 
-        {/* Heading */}
-        <motion.h1
-          className="text-5xl md:text-6xl font-bold leading-tight mb-6"
-          variants={fadeUpVariants}
-        >
-          {t('greeting')}{' '}
-          <span className="text-primary font-extrabold"> {t('name')} </span>
-        </motion.h1>
-
-        {/* Subheading */}
-        <motion.p
-          className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
-          variants={fadeUpVariants}
-        >
-          {t('description_1')}{' '}
-          <span className="text-primary font-semibold"> {t('years')} </span>{' '}
-          {t('description_2')}
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          variants={fadeUpVariants}
-        >
-          <Button size="lg" onClick={() => scrollToSection('projects')}>
-            {t('cta')} <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link
-              href={locale === 'de' ? '/lebenslauf.pdf' : '/resume.pdf'}
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="mt-10 flex flex-col gap-8 md:mt-14 md:flex-row md:items-end md:justify-between">
+            <p
+              data-hero-copy
+              className="max-w-md text-base leading-relaxed text-muted-foreground md:text-lg"
             >
-              <Download className="mr-2 h-4 w-4" /> {t('download_cv')}
-            </Link>
-          </Button>
-        </motion.div>
-      </motion.div>
+              {t('description')}
+            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8">
+              <div data-hero-copy>
+                <Magnetic>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection('projects')}
+                    className={`${ctaClass} cursor-pointer text-foreground`}
+                  >
+                    {t('cta')}
+                    <ArrowUpRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </button>
+                </Magnetic>
+              </div>
+              <div data-hero-copy>
+                <Magnetic>
+                  <Link
+                    href={locale === 'de' ? '/lebenslauf.pdf' : '/resume.pdf'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${ctaClass} text-muted-foreground hover:text-foreground`}
+                  >
+                    {t('download_cv')}
+                    <ArrowDown className="size-3.5 transition-transform duration-300 group-hover:translate-y-0.5" />
+                  </Link>
+                </Magnetic>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10"
-      >
-        <ChevronDown className="h-6 w-6 text-muted-foreground" />
-      </motion.div>
+        <div
+          data-hero-copy
+          className="text-meta flex items-center gap-2 text-muted-foreground"
+        >
+          <span>{t('scroll')}</span>
+          <ArrowDown data-hero-arrow className="size-3.5" />
+        </div>
+      </div>
     </Section>
   );
 };
